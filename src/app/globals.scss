@@ -1,0 +1,56 @@
+// https://nextjs.org/learn-pages-router/basics/assets-metadata-css/global-styles
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    Fira Sans,
+    Droid Sans,
+    Helvetica Neue,
+    sans-serif;
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: #0070f3;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #aaac;
+  &:hover {
+    background-color: #aaaf;
+  }
+}
+// ::-webkit-scrollbar-track {
+//   background-color: white;
+//   border-radius: 2px;
+// }
+// ::selection {
+//   color: azure;
+//   background: #00f7;
+// }
