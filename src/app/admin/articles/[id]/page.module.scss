@@ -1,0 +1,38 @@
+$navbar-height:58px;
+
+.header {
+    width: 100%;
+    height: $navbar-height;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    z-index: 11;
+    display: flex;
+    background: #333;
+    align-items: center;
+}
+
+.article {
+    width: 100%;
+    height: calc(100vh - $navbar-height);
+    display: flex;
+    .input_area,
+    .preview_area {
+        width: 50%;
+        padding: 1rem;
+        overflow-y: auto;
+    }
+    .input_area {
+        border: none;
+        resize: none;
+        outline: none;
+        white-space: pre-wrap;
+        tab-size: 4;
+        font-size: large;
+    }
+    .preview_area {
+        border-left: 1px solid #ddd;
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+}
