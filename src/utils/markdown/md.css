@@ -1,0 +1,16 @@
+blockquote p {
+    border-left: 5px gray solid;
+    padding-left: 30px;
+    font-weight: bold;
+}
+
+pre {
+    background-color: #eee;
+    padding: 30px 20px;
+    border-radius: 10px;
+    overflow-x: scroll;
+}
+
+code {
+    color: #fff;
+}
