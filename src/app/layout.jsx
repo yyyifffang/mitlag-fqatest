@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import "./globals.scss"
-import Navbar from "@/components/Navbar/Navbar"
+import Header from "@/components/Header/Header"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <body className={inter.className}>
-        <Navbar/>
+        <Header/>
         {children}
       </body>
     </html>
