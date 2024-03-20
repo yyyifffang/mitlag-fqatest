@@ -13,12 +13,13 @@ const style = {
     transition: "500ms ease-in-out"
 }
 
-export default function PageSpinner({ showing }) {
+export default function PageSpinner({ showing, hideHeader }) {
+    const zIndex = hideHeader? 100: 9
     return (
         <div style={{
             ...style,
             opacity : showing? 1 :0,
-            zIndex: showing? 100: -100,
+            zIndex: showing? zIndex: -100,
         }}>
             <div>
                 <Spinner animation="grow" variant="dark" />{' '}

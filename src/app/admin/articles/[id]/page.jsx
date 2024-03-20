@@ -222,6 +222,7 @@ export default function Id({ params }) {
         {/* 載入頁面時顯示動畫 */}
         <PageSpinner
             showing={config.isLoading}
+            hideHeader={true}
         />
         {
             // 文章不存在時跳出提示視窗
