@@ -1,0 +1,158 @@
+$primary-color: #539c9c;
+$secondary-color: #6c757d;
+$success-color: #28a745; //已發佈顏色
+$danger-color: #dc3545; // 未發佈/刪除顏色
+$font-size: 16px;
+
+
+//表格樣式
+.table {
+  width: 80%;
+  border-collapse: collapse; // 刪除表格間空隙
+  margin: 0 auto;
+
+  th, td {
+    padding: 4px;
+    text-align: center;
+  }
+
+  th {
+    background-color: $primary-color;
+    color: white;
+  }
+
+  tr {
+    border: 1px solid #ADADAD;
+  }
+}
+
+.button {
+  padding: 8px 16px;
+  border: none; 
+  border-radius: 4px; 
+  cursor: pointer; 
+  margin-right: 4px;
+
+  &.edit {
+    background-color: $primary-color; // 编辑按钮背景色
+    color: white; // 文字颜色
+    &:hover {
+      background-color: lighten($primary-color, 10%)
+    }
+  }
+
+  &.delete {
+    background-color: $danger-color; // 删除按钮背景色
+    color: white;
+
+    &:hover {
+      background-color: lighten($danger-color, 10%)
+    }
+  }
+
+  &.published {
+    background-color: $success-color; // 已发布按钮背景色
+    color: white;
+  }
+
+  &.unpublished {
+    background-color: $danger-color; // 未发布按钮背景色
+    color: white;
+  }
+
+  &.addArticle {
+    background-color: #6c757d;
+    color: white;
+  }
+}
+
+// 搜索和篩選容器的基本樣式
+.searchAndFilterContainer {
+  width: 80%;
+  display: flex;
+  gap: 25px; // 元素間的間隙
+  padding: 10px;
+  background-color: #f8f9fa; // 背景顏色，可根據需求更改
+  margin: 0 auto;
+  // 搜索輸入框樣式
+  .searchInput {
+    padding: 10px;
+    font-size: $font-size;
+    border: 1px solid #ced4da; // 邊框顏色
+    border-radius: 4px; // 邊框圓角
+
+    &:focus {
+      border-color: $primary-color;
+      outline: none;
+    }
+  }
+
+  // 篩選選擇器樣式
+  .filterSelect {
+    min-width: 120px; // 最小寬度
+    padding: 8px;
+    font-size: $font-size;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+
+    &:focus {
+      border-color: $primary-color;
+      outline: none;
+    }
+  }
+
+  // 新增文章按鈕樣式
+  .addArticleButton {
+    padding: 10px 12px;
+    font-size: $font-size;
+    background-color: $primary-color;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}
+
+.sortButton {
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+
+//切換頁面
+.pagination {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  padding: 0;
+
+  .pageItem {
+      margin: 0 5px;
+  }
+
+  .pageLink {
+      padding: 5px 10px;
+      border: 1px solid #ddd;
+      color: #333;
+      text-decoration: none;
+
+      &:hover {
+          background-color: #f2f2f2;
+      }
+  }
+
+  .active {
+      .pageLink {
+          background-color: #007bff;
+          color: white;
+          border-color: #007bff;
+      }
+  }
+}
