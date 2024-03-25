@@ -1,0 +1,106 @@
+.articleShow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap:10px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .articleBox {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    align-items: stretch;
+    justify-content: flex-start;
+    width: calc(20% - 20px); // 减去margin的空间
+    margin-bottom: 30px; // 给底部留出空间
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); // 给盒子添加阴影
+  }
+
+  /* 响应式设计调整，针对不同屏幕宽度 */
+@media (max-width: 1200px) {
+  .articleBox {
+    flex: 0 1 calc(25% - 20px); /* 调整卡片在容器中所占的百分比宽度 */
+  }
+}
+
+@media (max-width: 992px) {
+  .articleBox {
+    flex: 0 1 calc(33.333% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .articleBox {
+    flex: 0 1 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 576px) {
+  .articleBox {
+    flex: 0 1 calc(100% - 20px); /* 在非常小的屏幕上，卡片宽度调整为100%，从而每行只显示一个 */
+  }
+}
+  
+  .pagination {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    padding: 0;
+  
+    .pageItem {
+        margin: 0 5px;
+    }
+  
+    .pageLink {
+        padding: 5px 10px;
+        border: 1px solid #ddd;
+        color: #333;
+        text-decoration: none;
+  
+        &:hover {
+            background-color: #f2f2f2;
+        }
+    }
+  
+    .active {
+        .pageLink {
+            background-color: #007bff;
+            color: white;
+            border-color: #007bff;
+        }
+    }
+  }
+
+  .srOnly {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+
+  .noArticleShow{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+
+    p{
+      font-size: 25px;
+    }
+  }
+
+  .loading{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+  }
+
+
+
+   
